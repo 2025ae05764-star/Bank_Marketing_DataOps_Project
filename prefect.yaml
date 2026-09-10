@@ -4,10 +4,10 @@ prefect-version: 3.8.5
 build:
 push:
 
-pull: []
-#- prefect.deployments.steps.git_clone:
-  #  repository: https://github.com/your-org/your-repo.git
-  #  branch: main
+pull:
+  - prefect.deployments.steps.git_clone:
+      repository: https://github.com/2025ae05764-star/Bank_Marketing_DataOps_Project.git
+      branch: main
 
 deployments:
 - name: bank-marketing-deployment
