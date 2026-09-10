@@ -1,0 +1,11 @@
+Column,Skew,OutliersDetected,Method,LowerBound,UpperBound
+age,0.785,468,IQR,9.5,69.5
+duration,3.263,774,Percentile Cutoff,11.0,1271.25
+campaign,4.762,406,Percentile Cutoff,1.0,14.0
+pdays,-4.921,102,Percentile Cutoff,3.0,999.0
+previous,3.831,310,Percentile Cutoff,0.0,2.0
+emp.var.rate,-0.724,0,IQR,-6.6000000000000005,6.200000000000001
+cons.price.idx,-0.231,0,IQR,91.69650000000001,95.3725
+cons.conf.idx,0.303,446,IQR,-52.150000000000006,-26.949999999999992
+euribor3m,-0.709,0,IQR,-4.081499999999999,10.3865
+nr.employed,-1.044,0,Percentile Cutoff,4963.6,5228.1

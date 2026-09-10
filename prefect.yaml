@@ -1,0 +1,28 @@
+name: bank-marketing-dataops
+prefect-version: 3.8.5
+
+build:
+push:
+
+pull: []
+#- prefect.deployments.steps.git_clone:
+  #  repository: https://github.com/your-org/your-repo.git
+  #  branch: main
+
+deployments:
+- name: bank-marketing-deployment
+  version:
+  tags: [bank-marketing, datascience, dataops]
+  description: API-driven cloud-native Bank Marketing DataOps pipeline
+  entrypoint: flows/workflow_bankmarketing.py:main_flow
+  #storage: 
+     # block: bankmarketing-gcs-creds   # name of your GCS block
+  parameters: {}
+  work_pool:
+    name: bank-marketing-pool
+    work_queue_name:
+    job_variables: {}
+  schedules:
+  - interval: 120
+    timezone: Asia/Kolkata
+    active: true

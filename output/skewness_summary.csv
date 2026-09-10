@@ -1,0 +1,11 @@
+,Before_Skew,After_Skew,Change
+age,0.432,0.432,0.0
+duration,1.877,-0.286,2.162
+campaign,2.414,1.045,1.37
+pdays,-5.871,-5.871,-0.0
+previous,2.845,2.579,0.266
+emp.var.rate,-0.773,-0.947,0.175
+cons.price.idx,-0.207,-0.207,0.0
+cons.conf.idx,0.128,0.128,0.0
+euribor3m,-0.798,-0.854,0.056
+nr.employed,-1.103,-1.083,-0.02
