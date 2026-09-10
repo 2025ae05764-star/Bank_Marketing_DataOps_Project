@@ -8,21 +8,24 @@ pull:
   - prefect.deployments.steps.git_clone:
       repository: https://github.com/2025ae05764-star/Bank_Marketing_DataOps_Project.git
       branch: main
+  - prefect.deployments.steps.run_shell_script:
+      script: cd Bank_Marketing_DataOps_Project-main && python -m pip install -r requirements.txt
 
 deployments:
-- name: bank-marketing-deployment
-  version:
-  tags: [bank-marketing, datascience, dataops]
-  description: API-driven cloud-native Bank Marketing DataOps pipeline
-  entrypoint: flows/workflow_bankmarketing.py:main_flow
-  #storage: 
-     # block: bankmarketing-gcs-creds   # name of your GCS block
-  parameters: {}
-  work_pool:
-    name: bank-marketing-pool
-    work_queue_name:
-    job_variables: {}
-  schedules:
-  - interval: 120
-    timezone: Asia/Kolkata
-    active: true
+  - name: bank-marketing-deployment
+    version:
+    tags:
+      - bank-marketing
+      - datascience
+      - dataops
+    description: API-driven cloud-native Bank Marketing DataOps pipeline
+    entrypoint: flows/workflow_bankmarketing.py:main_flow
+    parameters: {}
+    work_pool:
+      name: bank-marketing-pool
+      work_queue_name: default
+      job_variables: {}
+    schedules:
+      - interval: 120
+        timezone: Asia/Kolkata
+        active: true
