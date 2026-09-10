@@ -9,7 +9,7 @@ pull:
       repository: https://github.com/2025ae05764-star/Bank_Marketing_DataOps_Project.git
       branch: main
   - prefect.deployments.steps.run_shell_script:
-      script: cd Bank_Marketing_DataOps_Project-main && python -m pip install -r requirements.txt
+      script: python -m pip install -r /opt/prefect/Bank_Marketing_DataOps_Project-main/requirements.txt
 
 deployments:
   - name: bank-marketing-deployment
